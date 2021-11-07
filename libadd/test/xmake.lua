@@ -1,6 +1,6 @@
 add_rules("mode.debug", "mode.release")
 add_repositories("local-repo ../build")
-add_requires("libadd", {debug = is_mode("debug")})
+add_requires("libadd", {debug = is_mode("debug"), configs = {shared = true}})
 add_packages("libadd")
 
 target("test")
